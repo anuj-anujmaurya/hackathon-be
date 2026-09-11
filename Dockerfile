@@ -15,15 +15,16 @@ WORKDIR /var/www/html
 RUN apk add --no-cache \
     bash \
     curl \
+    freetype-dev \
     git \
-    libpng-dev \
     libjpeg-turbo-dev \
+    libpng-dev \
     libxml2-dev \
     libzip-dev \
     oniguruma-dev \
+    postgresql-dev \
     sqlite \
     sqlite-dev \
-    libpq-dev \
     unzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo pdo_pgsql pdo_sqlite gd zip bcmath exif pcntl \
